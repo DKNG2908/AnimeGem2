@@ -1,0 +1,370 @@
+/* --- Réinitialisation des marges et des paddings --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- Mise en page générale du body --- */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    background-color: #FFE2E2;
+}
+
+/* --- Style pour le bouton de changement de thème --- */
+#theme-toggle {
+    background-color: #F96060;
+    color: black;
+    padding: 10px 20px;
+    width: 200px;
+    margin: 0 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 100px;
+    position: absolute; 
+    bottom: 70px; 
+    left: 10px; 
+}
+
+/* --- Style de l'en-tête --- */
+header {
+    font-family: Inter, sans-serif;
+    background-color: #F96060;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Menu principal --- */
+.menu {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    list-style: none;
+    padding: 15px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* --- Styles des titres principaux --- */
+h1 {
+    font-family: Inter, sans-serif;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+/* --- Images principales --- */
+.imagePrincipale img {
+    width: 100%;
+    height: 248px;
+}
+
+/* --- Section des thèmes --- */
+.themes {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    padding: 20px;
+}
+
+/* --- Zone principale du contenu --- */
+main {
+    flex: 1;
+}
+
+/* --- Style du pied de page --- */
+footer {
+    background-color: #F96060;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin-top: auto;
+}
+
+/* --- Images des produits sous différents thèmes --- */
+.imageThemeProduit img {
+    width: 100%;
+    height: 248px;
+}
+
+/* --- Disposition des produits --- */
+.produits {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.produits {
+    text-align: center; 
+}
+
+.produits img {
+    display: block; 
+    margin: 0 auto; 
+}
+
+/* --- Détails des produits --- */
+.nom, .prix {
+    margin-top: 0px;  
+}
+
+/* --- Style du bouton "Ajouter au panier" --- */
+.ajouteraupanier {
+    background-color: #F96060;
+    padding: 10px 20px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    color: black;
+}
+
+body.dark-theme .ajouteraupanier {
+    color: white; /* Couleur du texte en mode sombre */
+}
+
+.ajouteraupanier:hover {
+    background-color: #c05050; /* Changement de couleur au survol */
+}
+
+/* --- Section Panier --- */
+.contenuPanier {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contenuPanier h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.produitPanier {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.produitPanier img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.produitPanier .item-name {
+    flex: 1;
+    margin-left: 10px;
+    font-size: 1.1em;
+}
+
+.produitPanier .item-quantity {
+    display: flex;
+    align-items: center;
+}
+
+.produitPanier .item-quantity input {
+    width: 40px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* --- Total du panier --- */
+#totalPanier {
+    position: fixed;
+    top: 125px;
+    right: 140px;
+    background-color: #F96060;
+    color: black;
+    padding: 15px;
+    border-radius: 50px;
+    text-align: center;
+}
+  
+#totalPanier #prixTotal {
+    margin-bottom: 20px;
+}
+  
+#totalPanier #boutonPaiement {
+    display: block;
+    margin-top: 10px;
+    background-color: #FFE2E2;
+    color: black;
+    padding: 10px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* --- Section Contact --- */
+
+/* Centrer le formulaire */
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: transparent; 
+    border-radius: 0;
+}
+
+/* Rendre les champs d'entrée transparents */
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="message"] {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: transparent; /* Fond transparent */
+    border: 1px solid black; /* Bordure visible pour repérage */
+    color: black; /* Texte visible */
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+/* --- Bouton envoyer --- */
+#contact button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #F96060;
+    border: none;
+    color: black;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 100px;
+}
+
+
+/* --- Bouton de retour en haut de page --- */
+#scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #F96060;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 100px;
+    display: none; /* Cacher le bouton par défaut */
+}
+
+/* --- Styles Responsives --- */
+
+/* Tablettes et petits ordinateurs */
+@media (max-width: 1024px) {
+    .menu {
+        flex-direction: column;
+    }
+
+    .produits {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .produitPanier {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #contact form {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    #scroll-to-top {
+        font-size: 18px;
+    }
+}
+
+/* Smartphones en mode portrait */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Réduire la taille de la police */
+    }
+
+    .imagePrincipale img, .imageThemeProduit img {
+        height: auto; /* Adaptation de la hauteur pour ne pas déformer les images */
+    }
+
+    .produits {
+        gap: 10px;
+        width: 100%;
+    }
+
+    .produitPanier {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .menu li a {
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    #contact form {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    #theme-toggle {
+        bottom: 40px; /* Ajustement du bouton theme toggle */
+    }
+
+    #scroll-to-top {
+        font-size: 16px;
+    }
+}
+
+/* Smartphones en mode portrait avec petit écran */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px; /* Réduire davantage la taille de la police */
+    }
+
+    #theme-toggle {
+        width: 150px;
+        font-size: 14px;
+    }
+
+    .menu li a {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .produits {
+        gap: 5px;
+    }
+
+    .produitPanier {
+        padding: 10px 0;
+    }
+}

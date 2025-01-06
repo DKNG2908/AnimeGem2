@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Rend le site responsive -->
+    <title>AnimeGem</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Icône de la page (favicon), affichée dans l'onglet du navigateur -->
+    <link rel="stylesheet" href="CSS/AnimeGem1.css">
+</head>
+<body style="background-color: #FFE2E2;">
+    <header>
+        <nav>
+            <!-- Navigation principale -->
+            <ul class="menu">
+                <li><a href="Panier.html">PANIER</a></li>
+                <li><a href="AnimeGem.html">ACCUEIL</a></li>
+                <li><a href="Contact.html">CONTACT</a></li>
+            </ul>
+            <button id="theme-toggle">Clair/Sombre</button> 
+            <!-- Bouton pour permettre de basculer entre les modes clair et sombre. -->
+        </nav>
+    </header>
+    <main>
+        <!-- Contenu principal de la page -->
+        <h1> Panier</h1>
+        <section class="contenuPanier">
+            <h2>Votre panier</h2>
+            <div id="produitPanier">
+            <!-- Conteneur dynamique pour afficher les produits ajoutés au panier -->
+            </div>
+        </section>
+
+        <!-- Total du panier -->
+        <div id="totalPanier">
+            <p id="prixTotal">Total : 0 €</p>
+            <button id="boutonPaiement">Payer</button>
+        </div>
+    </main>
+    <footer>
+        <!-- Le pied de page du site -->
+        <p>©<span id="year">2024</span>, AnimeGem.</p>
+    </footer>
+
+    <button id="scroll-to-top" title="Revenir en haut">↑</button>
+    <!-- Bouton permettant de revenir en haut de la page lorsqu'on fait défiler la page -->
+
+    <script src="JavaScript/main.js"></script>
+    <!-- Script JavaScript pour gérer les fonctionnalités principales du site -->
+    <script src="JavaScript/panier.js"></script>
+    <!--  -->
+    <script src="JavaScript/theme.js"></script>
+    <!-- Script JavaScript pour gérer le changement de thème (clair/sombre) -->
+</body>
+</html>

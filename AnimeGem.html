@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Rend le site responsive -->
+    <title>AnimeGem</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Icône de la page (favicon), affichée dans l'onglet du navigateur -->
+    <link rel="stylesheet" href="CSS/AnimeGem1.css">
+</head>
+<body style="background-color: #FFE2E2;">
+    <header>
+        <nav>
+            <!-- Navigation principale -->
+            <ul class="menu">
+                <li><a href="Panier.html">PANIER</a></li>
+                <li><a href="AnimeGem.html">ACCUEIL</a></li>
+                <li><a href="Contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle">Clair/Sombre</button>
+        <!-- Bouton pour permettre de basculer entre les modes clair et sombre. -->
+    </header>
+    <main>
+        <h1> AnimeGem</h1>
+
+        <div id="imagePrincipale" class="imagePrincipale">
+            <!-- Section avec l'image principale du site -->
+            <img src="Images/PageAccueil/bigthree.PNG" alt="Image Principale">
+        </div>
+
+        <section id="themes" class="themes">
+            <!-- Section des thèmes (liens vers les pages des différents anime) -->
+            <div id="themes-1" class="themes">
+                <a href="Bleach.html">
+                    <!-- Lien vers la page "Bleach" -->
+                    <img src="Images/PageAccueil/BleachAccueil.png" alt="Image Bleach" width="239" height="308">
+                    <!-- Image cliquable pour Bleach -->
+                </a>
+            </div>
+            <div id="themes-2" class="themes">
+                <a href="Naruto.html">
+                    <!-- Lien vers la page "Naruto" -->
+                    <img src="Images/PageAccueil/NarutoAccueil.webp" alt="Image Naruto" width="239" height="308">
+                    <!-- Image cliquable pour Naruto -->
+                </a>
+            </div>
+            <div id="themes-3" class="themes">
+                <a href="OnePiece.html">
+                    <!-- Lien vers la page "One Piece" -->
+                    <img src="Images/PageAccueil/OnePieceAccueil.png" alt="Image One Piece" width="239" height="308">
+                    <!-- Image cliquable pour One Piece -->
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Pied de page -->
+        <p>©<span id="year">2024</span>, AnimeGem.</p>
+    </footer>
+
+    <button id="scroll-to-top" title="Revenir en haut">↑</button>
+    <!-- Bouton pour revenir en haut de la page lorsque l'utilisateur fait défiler la page -->
+    
+    <script src="JavaScript/main.js"></script>
+    <!-- Script pour gérer les interactions générales du site -->
+    <script src="JavaScript/theme.js"></script>
+    <!-- Script pour gérer le changement de thème (clair/sombre) -->
+</body>
+</html>
