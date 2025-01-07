@@ -44,20 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <button class="increase-quantity" data-id="${item.id}">+</button>
             `;
             cartItemsContainer.appendChild(itemElement);
-
-            // Calculer le total
-            totalPrice += item.price * item.quantity;
         });
-
-        // Mettre à jour l'affichage du total
-        if (totalPriceContainer) {
-            totalPriceContainer.innerHTML = `Total : €${totalPrice.toFixed(2)}`;
-        }
-
-        // Mettre à jour le total dans totalPanier
-        if (totalPanierContainer) {
-            totalPanierContainer.textContent = `Total : ${totalPrice.toFixed(2)} €`;
-        }
     }
 
     // Fonction pour supprimer un produit du panier
