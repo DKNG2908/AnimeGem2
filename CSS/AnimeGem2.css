@@ -8,7 +8,6 @@
     display: flex;
     min-height: 100vh;
     font-family: Arial, sans-serif;
-    background-color: white !important;
   }
   
   header {
@@ -49,8 +48,7 @@
   }
   
   #theme-toggle {
-    background-color: black;
-    color: white;
+    background-color: #F96060;
     border-radius: 100px;
     padding: 10px 15px;
     position: absolute; 
@@ -58,7 +56,22 @@
     left: 0px;
     z-index: 2;
     cursor: pointer;
+    border: 2px solid;
   }
+
+  #style-toggle {
+    background-color: #F96060;
+    padding: 10px 20px;
+    width: 200px;
+    margin: 0 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 100px;
+    position: absolute; 
+    bottom: 130px; 
+    left: 10px;
+    border: 2px solid;
+}
   
   
   main {
@@ -77,7 +90,6 @@
     position: absolute;
     top: 20px;
     left: 50%;
-    color: black;
     z-index: 2;
   }
   
@@ -209,13 +221,12 @@
   #contact input[type="message"] {
       width: 100%;
       padding: 10px;
-      background-color: black; /* Fond transparent */
-      color: white; /* Texte visible */
+      background-color: transparent; /* Fond transparent */
       border-radius: 5px;
   }
   
   form button {
-    background-color: black;
+
     color: white;
     padding: 10px 20px;
     border: none;
@@ -298,3 +309,164 @@
     cursor: pointer;
     text-align: center;
   }
+
+/* Adaptation pour les écrans de petite taille (comme les téléphones) */
+@media screen and (max-width: 768px) {
+
+
+    /* Réduction de la largeur du header pour éviter qu'il soit trop large */
+    header {
+      width: 100%;
+      height: auto;
+      padding: 10px;
+      position: relative;
+      text-align: left;
+      flex-direction: row; /* Aligne le menu horizontalement */
+    }
+  
+    /* Réajuster le menu dans le header */
+    header nav ul {
+      flex-direction: row; /* Alignement horizontal */
+      gap: 15px;
+    }
+  
+    /* Boutons theme-toggle et style-toggle */
+    #theme-toggle, #style-toggle {
+      width: 130px;
+      padding: 8px;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%); /* Centrer les boutons horizontalement */
+      margin-top: 5px;
+    }
+  
+    /* Section principale : Réduire la taille de l'image */
+    #imagePrincipale img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  
+    h1 {
+      font-size: 24px;
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%); /* Centrage du titre */
+      z-index: 2;
+    }
+  
+    /* Ajustement de la position des thèmes */
+    #themes {
+      top: 50%; /* Décale un peu plus bas pour rendre la page plus lisible */
+      left: 50%;
+      transform: translateX(-50%);
+      position: relative;
+      z-index: 2;
+    }
+  
+    /* Taille des thèmes */
+    .themes {
+      width: 120px; /* Réduit la taille des images des thèmes */
+      height: 180px;
+    }
+  
+    /* Ajustement de la disposition des images de thèmes */
+    #themes-1, #themes-2, #themes-3 {
+      position: relative;
+      top: 10px;
+      left: 0; /* Les images sont centrées */
+    }
+  
+    .themes img {
+      width: 100%;
+      height: auto;
+    }
+  
+    /* Ajustement du footer pour un meilleur affichage */
+    footer {
+      font-size: 12px;
+      padding: 10px;
+    }
+  
+    /* Ajustement des produits pour les petits écrans */
+    #produits {
+      display: flex;
+      flex-direction: column; /* Affichage en colonne pour les petits écrans */
+      gap: 15px;
+      align-items: center;
+      position: relative;
+      top: 50px;
+    }
+  
+    .produits {
+      width: 80%; /* Réduit la largeur des produits */
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .produits img {
+      width: 100%;
+      height: auto;
+    }
+  
+    /* Ajustement du panier pour les petits écrans */
+    .contenuPanier {
+      width: 90%;
+      margin: 20px auto;
+      padding: 15px;
+      position: relative;
+      top: 30%;
+      border: 1px solid black;
+    }
+  
+    /* Adaptation de la disposition des produits dans le panier */
+    .produitPanier {
+      flex-direction: column; /* Passe les éléments en colonne pour plus de lisibilité */
+      text-align: center;
+    }
+  
+    #totalPanier {
+      left: 50%;
+      transform: translateX(-50%);
+      top: 80%;
+      padding: 10px;
+    }
+
+  /* Boutons (theme-toggle et style-toggle) */
+  #theme-toggle {
+    width: 150px;
+    padding: 8px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%); /* Centrage horizontal */
+  }
+
+  #theme-toggle {
+    width: 150px;
+    padding: 8px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%); /* Centrage horizontal */
+  }
+
+
+  /* Adaptation de la section principale */
+  main {
+    margin-top: 20px;
+  }
+  
+  /* Réduire la taille des champs de formulaire */
+  form {
+    flex-direction: column;
+    width: 90%;
+    max-width: 100%;
+  }
+
+  form button {
+    margin-left: 0;
+    margin-top: 10px;
+    width: 100%;
+  }
+}
