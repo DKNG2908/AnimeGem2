@@ -105,6 +105,11 @@ footer {
     margin-top: auto;
 }
 
+footer a {
+    color: black;
+    padding: 10px;
+}
+
 /* --- Images des produits sous différents thèmes --- */
 .imageThemeProduit img {
     width: 100%;
