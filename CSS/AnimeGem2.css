@@ -140,6 +140,11 @@
     bottom: 0;
     z-index: 2;
   }
+
+footer a {
+    color: black;
+    padding: 10px;
+}
   
   #imageThemeProduit {
     margin-left: 100px; /* Laisse de l'espace pour le header fixe */
