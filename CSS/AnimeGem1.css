@@ -234,6 +234,11 @@ body.dark-theme .ajouteraupanier {
 
 /* --- Section Contact --- */
 
+#contact h2 {
+    position: relative;
+    text-align: center;
+}
+
 /* Centrer le formulaire */
 #contact form {
     display: flex;
