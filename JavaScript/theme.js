@@ -84,6 +84,11 @@ document.addEventListener("DOMContentLoaded", () => {
         // Modifier le bouton de changement de thème
         themeToggleButton.style.backgroundColor = '#069F9F';
         themeToggleButton.style.color = 'white';
+        
+        const styleToggleButton = document.getElementById("style-toggle");
+        styleToggleButton.style.backgroundColor = '#069F9F';
+        styleToggleButton.style.color = 'white';
+
     }
 
     // Fonction pour appliquer le thème clair
@@ -147,6 +152,11 @@ document.addEventListener("DOMContentLoaded", () => {
         // Modifier le bouton de changement de thème
         themeToggleButton.style.backgroundColor = '#F96060';
         themeToggleButton.style.color = 'black';
+
+        const styleToggleButton = document.getElementById("style-toggle");
+        styleToggleButton.style.backgroundColor = '#F96060';
+        styleToggleButton.style.color = 'black';
+
         
     }
 });
