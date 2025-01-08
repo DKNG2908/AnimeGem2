@@ -152,8 +152,9 @@ footer a {
   }
   
   #imageThemeProduit img {
-    height: 100vh;
-    width: 244px;
+    height: auto;
+    width: auto;
+    
   }
   
   /* Conteneur de la section produits */
