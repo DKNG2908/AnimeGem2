@@ -152,8 +152,8 @@ footer a {
   }
   
   #imageThemeProduit img {
-    height: auto;
-    width: auto;
+    height: 100vh;
+    width: 244px;
     
   }
   
