@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const itemElement = document.createElement('div');
             itemElement.classList.add('produitPanier');
             itemElement.innerHTML = `
+                <img src="${item.image || 'default-image.jpg'}" alt="${item.name}" style="width: 100px; height: 100px; object-fit: cover;">
                 <h3>${item.name}</h3>
                 <p>Prix : ${item.price.toFixed(2)} €</p>
                 <p>Quantité : ${item.quantity}</p>
