@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: productId,
             name: productName,
             price: parseFloat(productPrice),
-            image: productImage,
+            image : productImage,
             quantity: 1
         };
 
