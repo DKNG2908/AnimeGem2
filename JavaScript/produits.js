@@ -6,12 +6,14 @@ document.addEventListener("DOMContentLoaded", () => {
         const productId = button.getAttribute('data-id');
         const productName = button.getAttribute('data-name');
         const productPrice = button.getAttribute('data-price');
+        const productImage = button.getAttribute('data-image');
 
         // Créer un objet produit
         const product = {
             id: productId,
             name: productName,
             price: parseFloat(productPrice),
+            image: productImage,
             quantity: 1
         };
 
