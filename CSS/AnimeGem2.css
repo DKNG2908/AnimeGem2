@@ -1,444 +1,479 @@
+/* Reset de base pour tous les éléments : suppression des marges, padding, et définition du box-sizing */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    display: flex;
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
-  }
-  
-  header {
-    font-family: Inter, sans-serif;
-    background-color: white;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100px;
-    margin: 0;
-    padding: 20px;
-    top: 0;
-    left: 0;
-    position: fixed;
-    text-align: center;
-    z-index: 2;
-  }
-  
-  header nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 70px;
-  }
-  
-  header nav ul li {
-    margin: 0;
-  }
-  
-  header nav ul li a {
-    color: black;
-    text-decoration: none;
-  }
-  
-  #theme-toggle {
-    background-color: #F96060;
-    border-radius: 100px;
-    padding: 10px 15px;
-    position: absolute; 
-    bottom: 70px;
-    left: 0px;
-    z-index: 2;
-    cursor: pointer;
-    border: 2px solid;
-  }
-
-  #style-toggle {
-    background-color: #F96060;
-    padding: 10px 20px;
-    width: 200px;
-    margin: 0 10px;
-    cursor: pointer;
-    border: none;
-    border-radius: 100px;
-    position: absolute; 
-    bottom: 130px; 
-    left: 10px;
-    border: 2px solid;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
   
+/* Mise en page du body en flexbox, pour occuper toute la hauteur de la page */
+body {
+  display: flex;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
   
-  main {
-    flex: 1;
+/* Style du header : position fixe, centré verticalement et horizontalement */
+header {
+  font-family: Inter, sans-serif;
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100px;
+  margin: 0;
+  padding: 20px;
+  top: 0;
+  left: 0;
+  position: fixed;
+  text-align: center;
+  z-index: 2;
+}
+  
+/* Style de la liste de navigation dans le header */
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+  
+/* Style des éléments de la liste dans la navigation */
+header nav ul li {
+  margin: 0;
+}
+  
+/* Style des liens dans la navigation */
+header nav ul li a {
+  color: black;
+  text-decoration: none;
+}
+  
+/* Bouton de changement de thème : positionnement absolu en bas à gauche du header */
+#theme-toggle {
+  background-color: #F96060;
+  border-radius: 100px;
+  padding: 10px 15px;
+  position: absolute; 
+  bottom: 70px;
+  left: 0px;
+  z-index: 2;
+  cursor: pointer;
+  border: 2px solid;
+}
+
+/* Bouton de changement de style : positionné à gauche et légèrement plus large */
+#style-toggle {
+  background-color: #F96060;
+  padding: 10px 20px;
+  width: 200px;
+  margin: 0 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 100px;
+  position: absolute; 
+  bottom: 130px; 
+  left: 10px;
+  border: 2px solid;
+}
+  
+/* Style de la section main : occupe l'espace restant et positionne les éléments */
+main {
+  flex: 1;
+  position: relative;
+}
+  
+/* Style de l'image principale, couvrant toute la taille de son conteneur */
+#imagePrincipale img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+  
+/* Style du titre h1, positionné absolument sur l'image */
+h1 {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  z-index: 2;
+}
+  
+/* Positionnement du bloc des thèmes dans la page */
+#themes {
+  position: absolute;
+  top: 35%; /* Ajuste en fonction de la position verticale */
+  left: 50%;
+  z-index: 2;
+}
+  
+/* Style des images des thèmes */
+.themes {
+  position: absolute;
+  text-align: center;
+  width: 200px;
+  height: 250px;
+}
+  
+/* Décalage de l'image du thème 1 à gauche */
+#themes-1 {
+  left: -400px; /* Décale l'image de gauche */
+  top: 50px;
+}
+  
+/* Position de l'image du thème central */
+#themes-2 {
+  left: 0; /* Image du centre */
+  top: -200px;
+}
+  
+/* Décalage de l'image du thème 3 à droite */
+#themes-3 {
+  left: 400px; /* Décale l'image de droite */
+  top: 50px;
+}
+  
+/* Style des images dans les thèmes */
+.themes img {
+  width: 100%;
+  height: auto;
+}
+  
+/* Style du footer : positionné en bas de la page, couleur sombre */
+footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  margin-top: auto;
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+}
+
+/* Style des liens dans le footer */
+footer a {
+  color: black;
+  padding: 10px;
+}
+  
+/* Conteneur de l'image de produit avec un défilement vertical */
+#imageThemeProduit {
+  margin-left: 100px; /* Laisse de l'espace pour le header fixe */
+  overflow-y: auto; /* Ajoute un défilement si le contenu dépasse */
+}
+  
+/* Style des images dans le conteneur des produits */
+#imageThemeProduit img {
+  height: 100vh;
+  width: 244px;
+}
+  
+/* Conteneur de la section produits, affichés en colonne */
+#produits {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 20px;
+  position: absolute; /* Pour positionner les produits à un endroit spécifique */
+  top: 80px; /* Ajuste la position pour les mettre en haut */
+  left: 42%; /* Centre les produits horizontalement */
+}
+  
+/* Style des éléments produits : affichés en ligne avec image et informations */
+.produits {
+  display: flex;
+  flex-direction: row; /* Affichage en ligne (horizontal) */
+  align-items: center; /* Aligne les éléments verticalement au centre */
+  gap: 20px; /* Espacement entre l'image et les informations */
+  padding: 10px;
+  width: 200px; /* Ajuste la largeur pour accueillir l'image et les informations */
+}
+  
+/* Style des images dans chaque produit */
+.produits img {
+  width: 220px; /* Largeur de l'image */
+  height: 160px; /* Hauteur de l'image */
+}
+  
+/* Style des éléments texte dans les produits */
+.produits .nom {
+  margin-bottom: 10px;
+}
+  
+/* Style du prix dans les produits */
+.produits .prix {
+  margin-bottom: 10px;
+}
+  
+/* Style du bouton ajouter au panier */
+.produits .ajouteraupanier {
+  margin-top: 10px;
+  padding: 10px 20px;
+  color: white;
+  background-color: black;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+}
+  
+/* Conteneur de la section contact */
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Assure que le conteneur prend toute la hauteur de la page */
+}
+  
+/* Style du formulaire de contact : disposé en ligne avec un espacement */
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  width: 80%;
+  max-width: 900px; /* Ajuste selon la largeur souhaitée */
+  padding: 20px;
+  margin-left: 100px;
+}
+  
+/* Style des labels dans le formulaire */
+form label {
+  display: inline-block;
+}
+  
+/* Style des champs de saisie dans le formulaire */
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="message"] {
+  width: 100%;
+  padding: 10px;
+  background-color: transparent; /* Fond transparent */
+  border-radius: 5px;
+}
+  
+/* Style du bouton du formulaire */
+form button {
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  margin-left: 50px;
+}
+  
+/* Style du panier de commande */
+.contenuPanier {
+  width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative; /* Permet de le positionner par rapport à la page */
+  right: 200px; /* L'écart entre le header fixe et le contenu */
+  top: 35%;
+  border: 1px solid black;
+}
+  
+/* Titre du panier */
+.contenuPanier h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+  
+/* Style des éléments du panier (produit individuel) */
+.produitPanier {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid black;
+}
+  
+/* Style des images des produits dans le panier */
+.produitPanier img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+  
+/* Style du nom de l'article dans le panier */
+.produitPanier .item-name {
+  flex: 1;
+  margin-left: 10px;
+  font-size: 1.1em;
+}
+  
+/* Style de la quantité de produit dans le panier */
+.produitPanier .item-quantity {
+  display: flex;
+  align-items: center;
+}
+  
+/* Style des champs de quantité dans le panier */
+.produitPanier .item-quantity input {
+  width: 40px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+  
+/* --- Total du panier --- */
+#totalPanier {
+  position: absolute;
+  top: 40%;
+  left:70%;
+  color: black;
+  padding: 15px;
+  text-align: center;
+  border: 1px solid black;
+}
+  
+/* Style du prix total dans le panier */
+#totalPanier #prixTotal {
+  margin-bottom: 20px;
+  border-bottom: 1px solid black;
+}
+  
+/* Style du bouton de paiement */
+#totalPanier #boutonPaiement {
+  display: inline-block;
+  margin: 0 auto;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Adaptation pour les écrans de petite taille (comme les téléphones) */
+@media screen and (max-width: 768px) {
+  /* Réduction de la largeur du header pour éviter qu'il soit trop large */
+  header {
+    width: 100%;
+    height: auto;
+    padding: 10px;
     position: relative;
+    text-align: left;
+    flex-direction: row; /* Aligne le menu horizontalement */
   }
-  
+
+  /* Réajuster le menu dans le header */
+  header nav ul {
+    flex-direction: row; /* Alignement horizontal */
+    gap: 15px;
+  }
+
+  /* Boutons theme-toggle et style-toggle */
+  #theme-toggle, #style-toggle {
+    width: 130px;
+    padding: 8px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%); /* Centrer les boutons horizontalement */
+    margin-top: 5px;
+  }
+
+  /* Section principale : Réduire la taille de l'image */
   #imagePrincipale img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
-    z-index: 1;
   }
-  
+
   h1 {
+    font-size: 24px;
     position: absolute;
-    top: 20px;
+    top: 10px;
     left: 50%;
+    transform: translateX(-50%); /* Centrage du titre */
     z-index: 2;
   }
-  
+
+  /* Ajustement de la position des thèmes */
   #themes {
-    position: absolute;
-    top: 35%; /* Ajuste en fonction de la position verticale */
+    top: 50%; /* Décale un peu plus bas pour rendre la page plus lisible */
     left: 50%;
+    transform: translateX(-50%);
+    position: relative;
     z-index: 2;
   }
-  
+
+  /* Taille des thèmes */
   .themes {
-    position: absolute;
-    text-align: center;
-    width: 200px;
-    height: 250px;
+    width: 120px; /* Réduit la taille des images des thèmes */
+    height: 180px;
   }
-  
-  #themes-1 {
-    left: -400px; /* Décale l'image de gauche */
-    top: 50px;
+
+  /* Ajustement de la disposition des images de thèmes */
+  #themes-1, #themes-2, #themes-3 {
+    position: relative;
+    top: 10px;
+    left: 0; /* Les images sont centrées */
   }
-  
-  #themes-2 {
-    left: 0; /* Image du centre */
-    top: -200px;
-  }
-  
-  #themes-3 {
-    left: 400px; /* Décale l'image de droite */
-    top: 50px;
-  }
-  
+
   .themes img {
     width: 100%;
     height: auto;
   }
-  
+
+  /* Ajustement du footer pour un meilleur affichage */
   footer {
-    background-color: black;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    width: 100%;
-    margin-top: auto;
-    position: fixed;
-    bottom: 0;
-    z-index: 2;
+    font-size: 12px;
+    padding: 10px;
   }
 
-footer a {
-    color: black;
-    padding: 10px;
-}
-  
-  #imageThemeProduit {
-    margin-left: 100px; /* Laisse de l'espace pour le header fixe */
-    overflow-y: auto; /* Ajoute un défilement si le contenu dépasse */
-  }
-  
-  #imageThemeProduit img {
-    height: 100vh;
-    width: 244px;
-    
-  }
-  
-  /* Conteneur de la section produits */
+  /* Ajustement des produits pour les petits écrans */
   #produits {
     display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    gap: 20px;
-    position: absolute; /* Pour positionner les produits à un endroit spécifique */
-    top: 80px; /* Ajuste la position pour les mettre en haut */
-    left: 42%; /* Centre les produits horizontalement */
+    flex-direction: column; /* Affichage en colonne pour les petits écrans */
+    gap: 15px;
+    align-items: center;
+    position: relative;
+    top: 50px;
   }
-  
+
   .produits {
-    display: flex;
-    flex-direction: row; /* Affichage en ligne (horizontal) */
-    align-items: center; /* Aligne les éléments verticalement au centre */
-    gap: 20px; /* Espacement entre l'image et les informations */
-    padding: 10px;
-    width: 200px; /* Ajuste la largeur pour accueillir l'image et les informations */
+    width: 80%; /* Réduit la largeur des produits */
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
-  
+
   .produits img {
-    width: 220px; /* Largeur de l'image */
-    height: 160px; /* Hauteur de l'image */
+    width: 100%;
+    height: auto;
   }
-  
-  .produits .nom {
-    margin-bottom: 10px;
-  }
-  
-  .produits .prix {
-    margin-bottom: 10px;
-  }
-  
-  .produits .ajouteraupanier {
-    margin-top: 10px;
-    padding: 10px 20px;
-    color: white;
-    background-color: black;
-    border: none;
-    border-radius: 100px;
-    cursor: pointer;
-  }
-  
-  #contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; /* Assure que le conteneur prend toute la hauteur de la page */
-  }
-  
-  form {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 20px;
-    width: 80%;
-    max-width: 900px; /* Ajuste selon la largeur souhaitée */
-    padding: 20px;
-    margin-left: 100px;
-  }
-  
-  form label {
-    display: inline-block;
-  }
-  
-  #contact input[type="text"],
-  #contact input[type="email"],
-  #contact input[type="message"] {
-      width: 100%;
-      padding: 10px;
-      background-color: transparent; /* Fond transparent */
-      border-radius: 5px;
-  }
-  
-  form button {
 
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 100px;
-    cursor: pointer;
-    margin-left: 50px;
-  }
-  
+  /* Ajustement du panier pour les petits écrans */
   .contenuPanier {
-    width: 700px;
+    width: 90%;
     margin: 20px auto;
-    padding: 20px;
-    position: relative; /* Permet de le positionner par rapport à la page */
-    right: 200px; /* L'écart entre le header fixe et le contenu */
-    top: 35%;
-    border: 1px solid black;
-  }
-  
-  .contenuPanier h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .produitPanier {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid black;
-  }
-  
-  .produitPanier img {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-  }
-  
-  .produitPanier .item-name {
-    flex: 1;
-    margin-left: 10px;
-    font-size: 1.1em;
-  }
-  
-  .produitPanier .item-quantity {
-    display: flex;
-    align-items: center;
-  }
-  
-  .produitPanier .item-quantity input {
-    width: 40px;
-    text-align: center;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
-  
-  /* --- Total du panier --- */
-  #totalPanier {
-    position: absolute;
-    top: 40%;
-    left:70%;
-    color: black;
     padding: 15px;
-    text-align: center;
+    position: relative;
+    top: 30%;
     border: 1px solid black;
   }
-  
-  #totalPanier #prixTotal {
-    margin-bottom: 20px;
-    border-bottom: 1px solid black;
-  }
-  
-  #totalPanier #boutonPaiement {
-    display: inline-block;
-    margin: 0 auto;
-    background-color: black;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 100px;
-    cursor: pointer;
+
+  /* Adaptation de la disposition des produits dans le panier */
+  .produitPanier {
+    flex-direction: column; /* Passe les éléments en colonne pour plus de lisibilité */
     text-align: center;
   }
 
-/* Adaptation pour les écrans de petite taille (comme les téléphones) */
-@media screen and (max-width: 768px) {
-
-
-    /* Réduction de la largeur du header pour éviter qu'il soit trop large */
-    header {
-      width: 100%;
-      height: auto;
-      padding: 10px;
-      position: relative;
-      text-align: left;
-      flex-direction: row; /* Aligne le menu horizontalement */
-    }
-  
-    /* Réajuster le menu dans le header */
-    header nav ul {
-      flex-direction: row; /* Alignement horizontal */
-      gap: 15px;
-    }
-  
-    /* Boutons theme-toggle et style-toggle */
-    #theme-toggle, #style-toggle {
-      width: 130px;
-      padding: 8px;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%); /* Centrer les boutons horizontalement */
-      margin-top: 5px;
-    }
-  
-    /* Section principale : Réduire la taille de l'image */
-    #imagePrincipale img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-  
-    h1 {
-      font-size: 24px;
-      position: absolute;
-      top: 10px;
-      left: 50%;
-      transform: translateX(-50%); /* Centrage du titre */
-      z-index: 2;
-    }
-  
-    /* Ajustement de la position des thèmes */
-    #themes {
-      top: 50%; /* Décale un peu plus bas pour rendre la page plus lisible */
-      left: 50%;
-      transform: translateX(-50%);
-      position: relative;
-      z-index: 2;
-    }
-  
-    /* Taille des thèmes */
-    .themes {
-      width: 120px; /* Réduit la taille des images des thèmes */
-      height: 180px;
-    }
-  
-    /* Ajustement de la disposition des images de thèmes */
-    #themes-1, #themes-2, #themes-3 {
-      position: relative;
-      top: 10px;
-      left: 0; /* Les images sont centrées */
-    }
-  
-    .themes img {
-      width: 100%;
-      height: auto;
-    }
-  
-    /* Ajustement du footer pour un meilleur affichage */
-    footer {
-      font-size: 12px;
-      padding: 10px;
-    }
-  
-    /* Ajustement des produits pour les petits écrans */
-    #produits {
-      display: flex;
-      flex-direction: column; /* Affichage en colonne pour les petits écrans */
-      gap: 15px;
-      align-items: center;
-      position: relative;
-      top: 50px;
-    }
-  
-    .produits {
-      width: 80%; /* Réduit la largeur des produits */
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-    }
-  
-    .produits img {
-      width: 100%;
-      height: auto;
-    }
-  
-    /* Ajustement du panier pour les petits écrans */
-    .contenuPanier {
-      width: 90%;
-      margin: 20px auto;
-      padding: 15px;
-      position: relative;
-      top: 30%;
-      border: 1px solid black;
-    }
-  
-    /* Adaptation de la disposition des produits dans le panier */
-    .produitPanier {
-      flex-direction: column; /* Passe les éléments en colonne pour plus de lisibilité */
-      text-align: center;
-    }
-  
-    #totalPanier {
-      left: 50%;
-      transform: translateX(-50%);
-      top: 80%;
-      padding: 10px;
-    }
+  #totalPanier {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 80%;
+    padding: 10px;
+  }
 
   /* Boutons (theme-toggle et style-toggle) */
   #theme-toggle {
@@ -449,20 +484,11 @@ footer a {
     transform: translateX(-50%); /* Centrage horizontal */
   }
 
-  #theme-toggle {
-    width: 150px;
-    padding: 8px;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%); /* Centrage horizontal */
-  }
-
-
   /* Adaptation de la section principale */
   main {
     margin-top: 20px;
   }
-  
+
   /* Réduire la taille des champs de formulaire */
   form {
     flex-direction: column;
